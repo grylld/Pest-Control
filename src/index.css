@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: 'Open Sans', system-ui, sans-serif;
+  --font-display: 'Poppins', system-ui, sans-serif;
   
-  --color-primary: #FE7B02; /* Warm vibrant orange */
-  --color-primary-dark: #cc6202;
-  --color-ink: #0a0a0a;
+  --color-primary: #1E40AF; /* Trust Blue */
+  --color-primary-dark: #1e3a8a;
+  --color-cta: #F97316; /* Action Orange */
+  --color-ink: #0F172A; /* Deep Slate */
   --color-paper: #FCFBF8;
+}
+
+@layer base {
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
 }
 
 @layer utilities {
