@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  
+  --color-primary: #FE7B02; /* Warm vibrant orange */
+  --color-primary-dark: #cc6202;
+  --color-ink: #0a0a0a;
+  --color-paper: #FCFBF8;
+}
+
+@layer utilities {
+  .hero-mask {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Glowing CTA Button */
+.btn-glow {
+  box-shadow: 0 0 20px rgba(254, 123, 2, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(254, 123, 2, 0.6);
+  transform: translateY(-2px);
+}
